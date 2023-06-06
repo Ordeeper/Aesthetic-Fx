@@ -1,6 +1,11 @@
 #ifndef ERROR_HANDLING_H
 #define ERROR_HANDLING_H
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <MagickWand/MagickWand.h>
+
 #define ThrowWandException(wand) \
 { \
     char \
@@ -15,9 +20,7 @@
     exit(-1); \
 }
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <errno.h>
-#include <MagickWand/MagickWand.h>
+void syntax_error(char *argv_name);
+void invalid_option(char *argv_option);
 
 #endif
