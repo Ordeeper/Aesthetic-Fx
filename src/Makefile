@@ -28,7 +28,8 @@ install: image_processing.c error_handling.c | install-dependencies
 	$(CC) $(CFLAGS) $(LDFLAGS) image_processing.o error_handling.o argparse.o -o $(BINDIR)/aestheticfx
 
 clean:
-	rm -f image_processing.o error_handling.o
+	rm -f image_processing.o error_handling.o argparse.o
+
 
 uninstall:
 	rm -f $(BINDIR)/aestheticfx
